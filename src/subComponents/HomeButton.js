@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ReactComponent as HomeIcon } from '../assets/svg/house-svgrepo-com.svg';
@@ -24,8 +24,8 @@ const HomeBtn = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(0, 255, 0, 0.4);
-    box-shadow: 0 0 8px 5px rgba(0, 255, 0, 0.2);
+    background-color: rgba(50, 222, 129, 0.4);
+    box-shadow: 0 0 8px 5px rgba(40, 220, 120, 0.2);
   }
 
   & > *:first-child {
@@ -36,9 +36,9 @@ const HomeBtn = styled.div`
 const HomeButton = () => {
   return (
     <HomeBtn>
-      <NavLink to="/">
+      <Link to="/">
         <HomeIcon width={40} height={35} fill="currentColor" />
-      </NavLink>
+      </Link>
     </HomeBtn>
   );
 };
