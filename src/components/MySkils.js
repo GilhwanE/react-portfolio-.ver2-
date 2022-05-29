@@ -11,7 +11,8 @@ import HTMLicon from '../assets/images/HTML-icon.png';
 import CSSicon from '../assets/images/CSS-icon.png';
 import SASSicon from '../assets/images/SASS-icon.png';
 import REACTicon from '../assets/images/REACT-icon.png';
-import Fronticon from '../assets/images/frontend-icon.png';
+// import Fronticon from '../assets/images/frontend-icon.png';
+import ParticleComponent from '../subComponents/ParticleComponent';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -32,6 +33,7 @@ const Main = styled.div`
   padding: 2rem;
   z-index: 3;
   line-height: 1.5;
+  cursor: pointer;
 
   font-family: 'Lato', sans-serif;
   display: flex;
@@ -76,69 +78,58 @@ const Description = styled.p`
 
 const MySkils = () => {
   return (
-    <>
-      <LogoComponent theme="light" />
-      <HomeButton theme="light" />
-      <SocialIcons theme="light" />
-
-      <ThemeProvider theme={lightTheme}>
-        <Box>
-          <Main>
-            <Title>
-              <img width={70} height={70} src={Fronticon} alt="icon" />
-              <strong>Frontend Developer</strong>
-            </Title>
-            <Description>기억의 남는 컨테츠를 만들고 싶습니다.</Description>
-            <Description>
-              <dl>
-                <dt>
-                  <img width={70} height={70} src={HTMLicon} alt="icon" />
-                </dt>
-                <dd>
-                  시멘틱 마크업을 준수하며, 웹표준성, 웹접근성의 개념을 이해하고
-                  준수합니다
-                </dd>
-                <dt>
-                  <img width={70} height={70} src={CSSicon} alt="icon" />
-                </dt>
-                <dd>
-                  media query를 이용하여 반응형 페이지를 제작합니다. PSD
-                  디자인시안과 동일하게 제작합니다.
-                </dd>
-                <dt>JavaScript </dt>
-                <dd>
-                  DOM의 개념을 이해하고 객체들의 event 기능을 구현할 수
-                  있습니다.
-                </dd>
-                <dt>
-                  <img width={70} height={70} src={REACTicon} alt="icon" />
-                </dt>
-                <dd>
-                  Component의 개념을 이해하고, useState,useEffect Hooks에 대해
-                  이해하고 사용할 수 있습니다.
-                </dd>
-                <dt>
-                  <img width={70} height={70} src={SASSicon} alt="icon" />
-                </dt>
-                <dd>
-                  Component의 개념을 이해하고, useState,useEffect Hooks에 대해
-                  이해하고 사용할 수 있습니다.
-                </dd>
-              </dl>
-            </Description>
-            <Description>
-              <ul>
-                <Title>Interlasted skills</Title>
-                <li>Node.js </li>
-                <li>Swift </li>
-                <li>flutter </li>
-                <li>three.js </li>
-              </ul>
-            </Description>
-          </Main>
-        </Box>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={lightTheme}>
+      <Box>
+        <LogoComponent theme="light" />
+        <SocialIcons theme="light" />
+        <HomeButton />
+        <ParticleComponent theme="light" />
+        <Main>
+          <Title>
+            <strong>Frontend Developer</strong>
+          </Title>
+          <Title>
+            <h6>기억의 남는 컨테츠를 만들고 싶습니다.</h6>
+          </Title>
+          <Description>
+            <dl>
+              <dt>
+                <img width={70} height={70} src={HTMLicon} alt="icon" />
+              </dt>
+              <dd>
+                시멘틱 마크업을 준수하며, 웹표준성, 웹접근성의 개념을 이해하고
+                준수합니다
+              </dd>
+              <dt>
+                <img width={70} height={70} src={CSSicon} alt="icon" />
+              </dt>
+              <dd>
+                media query를 이용하여 반응형 페이지를 제작합니다. PSD
+                디자인시안과 동일하게 제작합니다.
+              </dd>
+              <dt>JavaScript </dt>
+              <dd>
+                DOM의 개념을 이해하고 객체들의 event 기능을 구현할 수 있습니다.
+              </dd>
+              <dt>
+                <img width={70} height={70} src={REACTicon} alt="icon" />
+              </dt>
+              <dd>
+                Component의 개념을 이해하고, useState,useEffect Hooks에 대해
+                이해하고 사용할 수 있습니다.
+              </dd>
+              <dt>
+                <img width={70} height={70} src={SASSicon} alt="icon" />
+              </dt>
+              <dd>
+                Component의 개념을 이해하고, useState,useEffect Hooks에 대해
+                이해하고 사용할 수 있습니다.
+              </dd>
+            </dl>
+          </Description>
+        </Main>
+      </Box>
+    </ThemeProvider>
   );
 };
 
