@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { ReactComponent as Githubicon } from '../assets/svg/icons-github.svg';
 
 const Box = styled.li`
-  width: 16rem;
-  height: 40vh;
+  width: 25rem;
+  height: 50vh;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
   padding: 1.5rem 2rem;
   margin-right: 8rem;
+  transform: translateY(15%);
 
   border-radius: 0 50px 0 50px;
   display: flex;
@@ -30,13 +30,13 @@ const Title = styled.h2`
   font-size: calc(1em + 0.4vw);
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   font-size: calc(0.8em + 0.3vw);
   font-family: 'Karla' sans-serif;
   font-weight: 500;
 `;
 
-const Tags = styled.p`
+const Tags = styled.div`
   border-top: 2px solid ${(props) => props.theme.body};
   padding-top: 0.5rem;
   display: flex;
@@ -53,7 +53,15 @@ const Tag = styled.span`
 
 const Image = styled.div`
   width: 100%;
-  height: auto;
+  height: 60%;
+  background-size: cover;
+  background-image: ${(props) => `url(${props.img})`};
+  background-position: center center;
+  background-position-y: 0;
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 10px;
 `;
 
 const Footer = styled.footer`
@@ -61,13 +69,22 @@ const Footer = styled.footer`
   justify-content: space-between;
 `;
 
-const Linkd = styled(NavLink)`
+const Linkd = styled.div`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   text-decoration: none;
-  padding: 0.5rem calc(2rem + 2vw);
+  width: 70%;
+  line-height: 1.5;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0 0 0 50px;
-  font-size: calc(0.6em + 1vw);
+  font-size: calc(0.5em + 1vw);
+
+  & > * {
+    width: 100%;
+  }
 
   ${Box}:hover & {
     background-color: ${(props) => props.theme.text};
@@ -75,7 +92,7 @@ const Linkd = styled(NavLink)`
   }
 `;
 
-const Git = styled(NavLink)`
+const Git = styled.div`
   color: inherit;
   text-decoration: none;
   ${Box}:hover & {
@@ -92,18 +109,33 @@ const Card = (props) => {
     <Box key={id}>
       <Title>{name}</Title>
       <Description>{description}</Description>
-      <Image>{img}</Image>
+      <Image img={img} />
       <Tags>
         {tags.map((t, id) => {
           return <Tag key={id}> #{t}</Tag>;
         })}
       </Tags>
       <Footer>
-        <Linkd to={{ pathname: `${demo}` }} target="_blank">
-          Visit
+        <Linkd>
+          {demo.map((d, id) => {
+            return (
+              <Linkd key={id} onClick={() => window.open(`${d}`)}>
+                Visit
+              </Linkd>
+            );
+          })}
         </Linkd>
-        <Git to={{ pathname: `${github}` }} target="_blank">
-          <Githubicon width={30} height={30} />
+        <Git>
+          {github.map((it, id) => {
+            return (
+              <Githubicon
+                width={30}
+                height={30}
+                key={id}
+                onClick={() => window.open(`${it}`)}
+              />
+            );
+          })}
         </Git>
       </Footer>
     </Box>
