@@ -41,7 +41,7 @@ const SocialIcons = (props) => {
           <Githubicon
             width={30}
             height={30}
-            fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+            color={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
           />
         </Link>
       </div>
