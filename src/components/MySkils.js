@@ -13,6 +13,7 @@ import SASSicon from '../assets/images/SASS-icon.png';
 import REACTicon from '../assets/images/REACT-icon.png';
 // import Fronticon from '../assets/images/frontend-icon.png';
 import ParticleComponent from '../subComponents/ParticleComponent';
+import BigTitle from '../subComponents/BigTitle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -62,7 +63,7 @@ const Title = styled.h2`
   }
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 0.5vw);
   padding: 0.5rem 0;
@@ -128,6 +129,7 @@ const MySkils = () => {
             </dl>
           </Description>
         </Main>
+        <BigTitle text="Skills" top="80%" right="10%" />
       </Box>
     </ThemeProvider>
   );

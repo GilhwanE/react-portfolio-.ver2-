@@ -10,6 +10,7 @@ import ParticleComponent from '../subComponents/ParticleComponent';
 
 import astrounaut from '../assets/images/spaceman.png';
 import { keyframes } from 'styled-components';
+import BigTitle from '../subComponents/BigTitle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -74,6 +75,7 @@ const About = () => {
           좋아했습니다.
         </Main>
       </Box>
+      <BigTitle text="ABOUT" top="10%" left="5%" />
     </ThemeProvider>
   );
 };
