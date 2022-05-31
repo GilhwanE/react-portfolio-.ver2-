@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Githubicon } from '../assets/svg/icons-github.svg';
+import { motion } from 'framer-motion';
 
-const Box = styled.li`
+const Box = styled(motion.li)`
   width: 25rem;
   height: 50vh;
   background-color: ${(props) => props.theme.text};
@@ -102,11 +103,24 @@ const Git = styled.div`
   }
 `;
 
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+    },
+  },
+};
+
 const Card = (props) => {
   const { id, name, description, tags, demo, github, img } = props.data;
 
   return (
-    <Box key={id}>
+    <Box key={id} variants={Item}>
       <Title>{name}</Title>
       <Description>{description}</Description>
       <Image img={img} />
