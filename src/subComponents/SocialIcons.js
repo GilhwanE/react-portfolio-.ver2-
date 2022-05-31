@@ -38,11 +38,7 @@ const SocialIcons = (props) => {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1.5 }}
       >
-        <Link
-          style={{ color: 'inherit' }}
-          target="_blank"
-          to={{ pathname: 'https://github.com/GilhwanE' }}
-        >
+        <Link style={{ color: 'inherit' }} target="_blank" to="/myskills">
           <Githubicon
             width={30}
             height={30}

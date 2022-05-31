@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import HomeButton from '../subComponents/HomeButton';
@@ -97,7 +97,7 @@ const Bottombar = styled.div`
   justify-content: space-evenly;
 `;
 
-const ABOUT = styled(Link)`
+const ABOUT = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   font-size: 1.3rem;
   text-decoration: none;
@@ -108,7 +108,7 @@ const ABOUT = styled(Link)`
   }
 `;
 
-const SKILS = styled(Link)`
+const SKILS = styled(NavLink)`
   color: ${(props) => props.theme.text};
   font-size: 1.3rem;
   text-decoration: none;
