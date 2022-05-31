@@ -38,12 +38,18 @@ const SocialIcons = (props) => {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1.5 }}
       >
-        <Link style={{ color: 'inherit' }} target="_blank" to="/myskills">
-          <Githubicon
-            width={30}
-            height={30}
-            color={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
-          />
+        <Link style={{ color: 'inherit' }} target="_blank" to="/">
+          <a
+            href="https://github.com/GilhwanE"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Githubicon
+              width={30}
+              height={30}
+              color={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+            />
+          </a>
         </Link>
       </motion.div>
       <motion.div
@@ -51,12 +57,18 @@ const SocialIcons = (props) => {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1.3 }}
       >
-        <Link style={{ color: 'inherit' }} to="/">
-          <Notionicon
-            width={30}
-            height={30}
-            fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
-          />
+        <Link style={{ color: 'inherit' }} to="/" target="_blank">
+          <a
+            href="https://www.notion.so/Studying-775c3685406443279e4f31a836c64fb7"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Notionicon
+              width={30}
+              height={30}
+              fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+            />
+          </a>
         </Link>
       </motion.div>
       <motion.div
@@ -64,12 +76,18 @@ const SocialIcons = (props) => {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1 }}
       >
-        <Link style={{ color: 'inherit' }} to="/">
-          <Velogicon
-            width={30}
-            height={30}
-            fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
-          />
+        <Link style={{ color: 'inherit' }} to="/" target="_blank">
+          <a
+            href="https://velog.io/@devegg"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Velogicon
+              width={30}
+              height={30}
+              fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+            />
+          </a>
         </Link>
       </motion.div>
       <Line
