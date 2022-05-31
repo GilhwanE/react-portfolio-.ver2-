@@ -18,7 +18,8 @@ const ParticleComponent = (props) => {
       <ParticleAnimation
         numParticles={300}
         interactive={false}
-        background={{ r: 100, g: 100, b: 100, a: 255 }}
+        background={{ r: 255, g: 255, b: 255, a: 255 }}
+        color={{ r: 5, g: 3, b: 199, a: 255 }}
         style={{
           position: 'absolute',
           width: '100%',
