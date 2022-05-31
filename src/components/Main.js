@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import HomeButton from '../subComponents/HomeButton';
@@ -97,14 +97,18 @@ const Bottombar = styled.div`
   justify-content: space-evenly;
 `;
 
-const ABOUT = styled(NavLink)`
+const ABOUT = styled(Link)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   font-size: 1.3rem;
   text-decoration: none;
   z-index: 1;
+
+  @media screen and(max-width: 30em) {
+    font-size: 0.5rem;
+  }
 `;
 
-const SKILS = styled(NavLink)`
+const SKILS = styled(Link)`
   color: ${(props) => props.theme.text};
   font-size: 1.3rem;
   text-decoration: none;
@@ -133,19 +137,52 @@ const Main = () => {
         </Center>
 
         <WORK to="/work">
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             work
           </motion.h2>
         </WORK>
 
         <Bottombar>
           <ABOUT to="/about" click={click}>
-            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               about.
             </motion.h2>
           </ABOUT>
           <SKILS to="/myskils">
-            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               skills.
             </motion.h2>
           </SKILS>

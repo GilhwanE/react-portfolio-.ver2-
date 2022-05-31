@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -22,7 +23,7 @@ const Icons = styled.div`
   }
 `;
 
-const Line = styled.span`
+const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
   background-color: ${(props) =>
@@ -32,7 +33,11 @@ const Line = styled.span`
 const SocialIcons = (props) => {
   return (
     <Icons>
-      <div>
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', duration: 1, delay: 1.5 }}
+      >
         <Link
           style={{ color: 'inherit' }}
           target="_blank"
@@ -44,8 +49,12 @@ const SocialIcons = (props) => {
             color={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
           />
         </Link>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', duration: 1, delay: 1.3 }}
+      >
         <Link style={{ color: 'inherit' }} to="/">
           <Notionicon
             width={30}
@@ -53,8 +62,12 @@ const SocialIcons = (props) => {
             fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
           />
         </Link>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', duration: 1, delay: 1 }}
+      >
         <Link style={{ color: 'inherit' }} to="/">
           <Velogicon
             width={30}
@@ -62,8 +75,19 @@ const SocialIcons = (props) => {
             fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
           />
         </Link>
-      </div>
-      <Line color={props.theme} />
+      </motion.div>
+      <Line
+        color={props.theme}
+        initial={{
+          height: 0,
+        }}
+        animate={{
+          height: '8rem',
+        }}
+        transition={{ type: 'spring', duration: 1, delay: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      />
     </Icons>
   );
 };
