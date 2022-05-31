@@ -99,12 +99,14 @@ const Bottombar = styled.div`
 
 const ABOUT = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  font-size: 1.3rem;
   text-decoration: none;
   z-index: 1;
 `;
 
 const SKILS = styled(NavLink)`
   color: ${(props) => props.theme.text};
+  font-size: 1.3rem;
   text-decoration: none;
   z-index: 1;
 `;
