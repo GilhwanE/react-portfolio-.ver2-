@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme } from './Themes';
+import { darkTheme } from './Themes';
 import { motion } from 'framer-motion';
 
 import HomeButton from '../subComponents/HomeButton';
@@ -85,7 +85,7 @@ const Work = () => {
           <CenterImg width={100} height={100} color={darkTheme.text} />
         </Rotate>
 
-        <BigTitle text="WORK" top="10%" right="10%" />
+        <BigTitle text="WORK" top="12%" right="10%" />
       </Box>
     </ThemeProvider>
   );

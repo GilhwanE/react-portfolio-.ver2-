@@ -6,7 +6,7 @@ const Text = styled.h1`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   right: ${(props) => props.right};
-  color: rgba(51, 42, 65, 0.72);
+  color: rgba(252, 246, 244, 0.1);
   font-size: calc(5rem + 5vw);
   z-index: 0;
 `;

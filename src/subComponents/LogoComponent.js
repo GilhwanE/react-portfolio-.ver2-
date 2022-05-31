@@ -10,6 +10,7 @@ const Logo = styled.h1`
 
   position: fixed;
   left: 2rem;
+  top: 2rem;
   z-index: 3;
 `;
 
