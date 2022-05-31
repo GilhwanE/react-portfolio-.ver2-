@@ -11,6 +11,7 @@ import HTMLicon from '../assets/images/HTML-icon.png';
 import CSSicon from '../assets/images/CSS-icon.png';
 import SASSicon from '../assets/images/SASS-icon.png';
 import REACTicon from '../assets/images/REACT-icon.png';
+import JSicon from '../assets/images/JS-icon.png';
 // import Fronticon from '../assets/images/frontend-icon.png';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitle';
@@ -81,10 +82,10 @@ const MySkils = () => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Box>
+        <ParticleComponent />
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
         <HomeButton />
-        <ParticleComponent theme="light" />
         <Main>
           <Title>
             <strong>Frontend Developer</strong>
@@ -108,7 +109,9 @@ const MySkils = () => {
                 media query를 이용하여 반응형 페이지를 제작합니다. PSD
                 디자인시안과 동일하게 제작합니다.
               </dd>
-              <dt>JavaScript </dt>
+              <dt>
+                <img width={70} height={70} src={JSicon} alt="icon" />
+              </dt>
               <dd>
                 DOM의 개념을 이해하고 객체들의 event 기능을 구현할 수 있습니다.
               </dd>
