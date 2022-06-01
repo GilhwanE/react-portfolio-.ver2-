@@ -9,7 +9,6 @@ import LogoComponent from '../subComponents/LogoComponent';
 import astrounaut from '../assets/images/spaceman.png';
 import { keyframes } from 'styled-components';
 import BigTitle from '../subComponents/BigTitle';
-import ParticleComponent2 from '../subComponents/ParticleComponent2';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -64,7 +63,6 @@ const About = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box>
-        <ParticleComponent2 />
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <HomeButton />

@@ -13,5 +13,5 @@ export const darkTheme = {
   text: '#FCF6F4',
   fontFamily: "'Lato', sans-serif",
   bodyRgba: '252, 246, 244',
-  textRgba: '0,0,0',
+  textRgba: '255,255,255',
 };
