@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ReactComponent as Githubicon } from '../assets/svg/icons-github.svg';
@@ -38,57 +37,57 @@ const SocialIcons = (props) => {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1.5 }}
       >
-        <Link style={{ color: 'inherit' }} target="_blank" to="/">
-          <a
-            href="https://github.com/GilhwanE"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Githubicon
-              width={30}
-              height={30}
-              color={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
-            />
-          </a>
-        </Link>
+        <a
+          style={{ color: 'inherit' }}
+          target="_blank"
+          to="/"
+          href="https://github.com/GilhwanE"
+          rel="noopener noreferrer"
+        >
+          <Githubicon
+            width={30}
+            height={30}
+            color={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+          />
+        </a>
       </motion.div>
       <motion.div
         initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1.3 }}
       >
-        <Link style={{ color: 'inherit' }} to="/" target="_blank">
-          <a
-            href="https://www.notion.so/Studying-775c3685406443279e4f31a836c64fb7"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Notionicon
-              width={30}
-              height={30}
-              fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
-            />
-          </a>
-        </Link>
+        <a
+          style={{ color: 'inherit' }}
+          to="/"
+          target="_blank"
+          href="https://www.notion.so/Studying-775c3685406443279e4f31a836c64fb7"
+          rel="noopener noreferrer"
+        >
+          <Notionicon
+            width={30}
+            height={30}
+            fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+          />
+        </a>
       </motion.div>
       <motion.div
         initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', duration: 1, delay: 1 }}
       >
-        <Link style={{ color: 'inherit' }} to="/" target="_blank">
-          <a
-            href="https://velog.io/@devegg"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Velogicon
-              width={30}
-              height={30}
-              fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
-            />
-          </a>
-        </Link>
+        <a
+          style={{ color: 'inherit' }}
+          to="/"
+          href="https://velog.io/@devegg"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Velogicon
+            width={30}
+            height={30}
+            fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}
+          />
+        </a>
       </motion.div>
       <Line
         color={props.theme}
