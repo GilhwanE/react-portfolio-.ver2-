@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 // config files
-import ParticleAnimation from 'react-particle-animation';
+import Particles from 'react-tsparticles';
+import particleConfig from '../config/particlesjs-config';
 
 const Box = styled.div`
   position: absolute;
@@ -9,23 +10,13 @@ const Box = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 0;
+  z-index: 3;
 `;
 
-const ParticleComponent = (props) => {
+const ParticleComponent = () => {
   return (
     <Box>
-      <ParticleAnimation
-        numParticles={300}
-        interactive={false}
-        background={{ r: 255, g: 255, b: 255, a: 255 }}
-        color={{ r: 5, g: 3, b: 199, a: 255 }}
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-        }}
-      />
+      <Particles params={particleConfig} />
     </Box>
   );
 };
