@@ -1,6 +1,6 @@
 #  React Portfolio ver2
 
-### overall 
+## 주요기능 
 
 - React, style-component, framer-motion를 이용하여 리액트 버전 포트폴리오 웹 사이트 제작
 
