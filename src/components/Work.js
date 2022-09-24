@@ -30,6 +30,10 @@ const Main = styled(motion.ul)`
   display: flex;
 
   color: white;
+
+  @media screen and (max-width: 550px) {
+    left: calc(1rem + 1vw);
+  }
 `;
 
 const Rotate = styled.span`

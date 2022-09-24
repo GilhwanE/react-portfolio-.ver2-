@@ -95,6 +95,10 @@ const Bottombar = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 550px) {
+    bottom: 10rem;
+  }
 `;
 
 const ABOUT = styled(NavLink)`
@@ -102,10 +106,6 @@ const ABOUT = styled(NavLink)`
   font-size: 1.3rem;
   text-decoration: none;
   z-index: 1;
-
-  @media screen and(max-width: 30em) {
-    font-size: 0.5rem;
-  }
 `;
 
 const SKILS = styled(NavLink)`

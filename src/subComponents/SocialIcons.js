@@ -20,6 +20,10 @@ const Icons = styled.div`
   & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
+  @media screen and (max-width: 550px) {
+    bottom: 5rem;
+    left: 1rem;
+  }
 `;
 
 const Line = styled(motion.span)`

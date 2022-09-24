@@ -26,6 +26,10 @@ const Box = styled.div`
   & > *:nth-child(5) {
     animation-delay: 0.8s;
   }
+
+  @media screen and (max-width: 500px) {
+    left: 5rem;
+  }
 `;
 
 const play = keyframes`
@@ -38,6 +42,7 @@ const play = keyframes`
 100%{
     transform: scaleY(1);
 }
+
 `;
 
 const Line = styled.span`

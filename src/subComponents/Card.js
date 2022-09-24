@@ -25,6 +25,10 @@ const Box = styled(motion.li)`
     color: ${(props) => props.theme.text};
     border: 1px solid ${(props) => props.theme.text};
   }
+  @media screen and (max-width: 550px) {
+    width: 18rem;
+    height: 35vh;
+  }
 `;
 
 const Title = styled.h2`
