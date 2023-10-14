@@ -40,7 +40,7 @@ export const WorkData = [
     tags: ['React', 'style-component'],
     img: 'https://res.cloudinary.com/dreamcoding/image/upload/v1654007628/reactmain_vbyjrf.png',
 
-    demo: ['https://GilhwanE.github.io/portfolio/'],
+    demo: ['https://hwan-introduction.netlify.app/'],
     github: ['https://github.com/GilhwanE/react-portfolio-.ver2-'],
   },
 
