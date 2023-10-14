@@ -37,7 +37,7 @@
 
 
 ### 메인화면 🖥
-![reactmain](https://user-images.githubusercontent.com/63918911/171349811-65e52470-3170-464a-ba77-4df0781738da.png)
+![스크린샷 2023-10-14 21 54 27](https://github.com/GilhwanE/react-portfolio-.ver2-/assets/63918911/facc77c3-5d3a-44d7-ac2a-d958eab6bc44)
 
 ### 개선사항
 - 현재는 PC 해상도로만 지원되고 있습니다. 
